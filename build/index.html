@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+  </head>
+  <body>
+
+  <div class="container">
+    <h2>Form Validator</h2>
+    <form action="" name="example_form">
+      <div class="form-line">
+        <label>Ad</label>
+        <input type="tel" name="ad" class="validation" rules='required,letter,minLen:2,maxLen:10'>
+      </div>
+
+      <div class="form-line">
+        <label>Soyad</label>
+        <input type="text" name="soyad" class="validation" rules='required,letter,minLen:2,maxLen:10'>
+      </div>
+
+      <div class="form-line">
+        <label>Kredi Tutarı</label>
+        <input type="tel" name="kredi" class="validation" rules='required,minVal:1000,maxVal:1000000' mask='currency'>
+      </div>
+
+      <div class="form-line">
+        <label>Ev Değeri</label>
+        <input type="tel" name="ev_degeri" class="validation"rules='required,minVal:1000,maxVal:1000000' mask='currency'>
+      </div>
+
+      <div class="form-line">
+        <label>TC Kimlik No</label>
+        <input type="tel" name="tckn" class="validation" rules='required,tckn,numeric'>
+      </div>
+
+      <div class="form-line">
+        <label>Vade</label>
+        <select name="vade" id="" class="validation" rules="required">
+          <option value="">Seçiniz</option>
+          <option value="12">12</option>
+          <option value="18">18</option>
+          <option value="24">24</option>
+          <option value="36">36</option>
+          <option value="48">48</option>
+          <option value="60">60</option>
+          <option value="72">72</option>
+          <option value="90">90</option>
+          <option value="108">108</option>
+          <option value="120">120</option>
+        </select>
+      </div>
+
+      <div class="form-line">
+        <button type="submit">Gönder</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="scripts/app.js"></script>
+  <script>
+      var validator = new formValidate('example_form');
+  </script>
+
+  </body>
+</html>
