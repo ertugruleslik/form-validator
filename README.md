@@ -1,5 +1,7 @@
 # Form Validator
 
-## Example
+Javascript Form Validator
+
+### Example
 
 [Demo](http://sekigo.com/form-validator)
